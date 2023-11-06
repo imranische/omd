@@ -1,5 +1,5 @@
 from one_hot_encoder import fit_transform
-
+import pytest
 
 def test_1():
     actual = fit_transform(['Moscow', 'New York', 'Moscow', 'London'])
@@ -49,3 +49,7 @@ def test_4():
         ('eltsin', [1, 0, 0])
         ]
     assert actual == exp_transformed
+
+def test_5():
+    with pytest.raises(TypeError):
+        fit_transform()

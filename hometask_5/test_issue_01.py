@@ -29,6 +29,8 @@ def encode(message: str) -> str:
     '... --- ...'
     >>> encode('PYTHON')
     '.--. -.-- - .... --- -.'
+    >>> encode('PYTHON') # doctest: +ELLIPSIS
+    '.--. ... -.'
     >>> encode('питон')
     Traceback (most recent call last):
     ...
